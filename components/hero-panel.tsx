@@ -25,7 +25,7 @@ export function HeroPanel({ onShop }: { onShop: () => void }) {
           New drop · Spring 2026
         </span>
         <h1 id="hero-title" className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance xl:text-5xl">
-          Welcome to <span className="text-primary">My Store</span>
+          Sound, engineered to <span className="text-primary">disappear.</span>
         </h1>
         <p className="max-w-sm text-sm leading-relaxed text-pretty text-muted-foreground xl:text-base">
           Halo One blends studio-grade drivers with on-device AI that tunes noise cancelling to your
