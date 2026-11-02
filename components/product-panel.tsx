@@ -72,7 +72,7 @@ export function ProductPanel({
                     onChange={() => onVariantChange(v.id)}
                     className="sr-only"
                   />
-                  <span className="size-6 rounded-full border border-white/10" style={{ backgroundColor: v.swatch }} />
+                  <span className="size-6 rounded-full border border-foreground/15" style={{ backgroundColor: v.swatch }} />
                   <span className="sr-only">{v.name}</span>
                 </label>
               ))}

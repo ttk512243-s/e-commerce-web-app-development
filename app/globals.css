@@ -33,6 +33,29 @@
 }
 
 :root {
+  color-scheme: light;
+  --background: oklch(0.985 0.002 265);
+  --foreground: oklch(0.17 0.008 265);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.17 0.008 265);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.17 0.008 265);
+  --primary: oklch(0.52 0.16 135);
+  --primary-foreground: oklch(0.99 0.01 125);
+  --secondary: oklch(0.955 0.004 265);
+  --secondary-foreground: oklch(0.17 0.008 265);
+  --muted: oklch(0.955 0.004 265);
+  --muted-foreground: oklch(0.48 0.012 265);
+  --accent: oklch(0.94 0.005 265);
+  --accent-foreground: oklch(0.17 0.008 265);
+  --destructive: oklch(0.56 0.2 25);
+  --border: oklch(0.17 0.008 265 / 10%);
+  --input: oklch(0.17 0.008 265 / 14%);
+  --ring: oklch(0.52 0.16 135 / 50%);
+  --radius: 0.75rem;
+}
+
+.dark {
   color-scheme: dark;
   --background: oklch(0.145 0.006 265);
   --foreground: oklch(0.97 0.003 265);

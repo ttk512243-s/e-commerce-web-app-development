@@ -201,7 +201,7 @@ export function CheckoutPanel({
       <div className="mt-auto flex flex-col gap-2 rounded-xl border bg-secondary/40 p-3 text-sm">
         <div className="flex items-center justify-between">
           <span className="flex items-center gap-2">
-            <span className="size-3 rounded-full border border-white/10" style={{ backgroundColor: variant.swatch }} />
+            <span className="size-3 rounded-full border border-foreground/15" style={{ backgroundColor: variant.swatch }} />
             {product.name} · {variant.name}
             <span className="font-mono text-xs text-muted-foreground">×{quantity}</span>
           </span>
