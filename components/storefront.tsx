@@ -6,7 +6,6 @@ import { HeroPanel } from '@/components/hero-panel'
 import { ProductPanel } from '@/components/product-panel'
 import { CheckoutPanel } from '@/components/checkout-panel'
 import { StepNav, type Step } from '@/components/step-nav'
-import { InfoDialog, type InfoTopic } from '@/components/info-dialog'
 import { product } from '@/lib/product'
 import { cn } from '@/lib/utils'
 
@@ -15,7 +14,6 @@ export function Storefront() {
   const [variantId, setVariantId] = useState(product.variants[0].id)
   const [quantity, setQuantity] = useState(1)
   const [checkoutFocusKey, setCheckoutFocusKey] = useState(0)
-  const [infoTopic, setInfoTopic] = useState<InfoTopic | null>(null)
 
   const variant = product.variants.find((v) => v.id === variantId) ?? product.variants[0]
 
@@ -32,13 +30,7 @@ export function Storefront() {
 
   return (
     <div className="flex h-dvh flex-col overflow-hidden">
-      <SiteHeader
-        cartCount={step === 'checkout' ? quantity : 0}
-        onCartClick={handleBuyNow}
-        onProductsClick={() => setStep('product')}
-        onInfoClick={setInfoTopic}
-      />
-      <InfoDialog topic={infoTopic} onClose={() => setInfoTopic(null)} />
+      <SiteHeader cartCount={step === 'checkout' ? quantity : 0} onCartClick={handleBuyNow} />
 
       <main className="grid min-h-0 flex-1 grid-cols-1 gap-3 px-3 pb-3 lg:grid-cols-[1.05fr_1fr_1fr]">
         <section aria-labelledby="hero-title" className={panelClass('discover')}>

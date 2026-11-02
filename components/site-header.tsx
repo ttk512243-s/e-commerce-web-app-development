@@ -1,16 +1,11 @@
 import { ShoppingBag } from 'lucide-react'
-import type { InfoTopic } from '@/components/info-dialog'
 
 export function SiteHeader({
   cartCount,
   onCartClick,
-  onProductsClick,
-  onInfoClick,
 }: {
   cartCount: number
   onCartClick: () => void
-  onProductsClick: () => void
-  onInfoClick: (topic: InfoTopic) => void
 }) {
   return (
     <header className="flex h-14 shrink-0 items-center justify-between px-4 lg:px-5">
@@ -24,15 +19,9 @@ export function SiteHeader({
       </a>
 
       <nav aria-label="Primary" className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
-        <button type="button" onClick={onProductsClick} className="transition-colors hover:text-foreground">
-          Products
-        </button>
-        <button type="button" onClick={() => onInfoClick('technology')} className="transition-colors hover:text-foreground">
-          Technology
-        </button>
-        <button type="button" onClick={() => onInfoClick('support')} className="transition-colors hover:text-foreground">
-          Support
-        </button>
+        <a href="#" className="transition-colors hover:text-foreground">Products</a>
+        <a href="#" className="transition-colors hover:text-foreground">Technology</a>
+        <a href="#" className="transition-colors hover:text-foreground">Support</a>
       </nav>
 
       <button
